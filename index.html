@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuruyemiş Dünyası</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Kuruyemiş Dünyası</div>
+        <div class="sepet">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="sepet-sayisi">0</span>
+        </div>
+    </nav>
+
+    <div class="urunler">
+        <div class="urun">
+            <img src="ceviz.webp" alt="Ceviz">
+            <h3>Ceviz</h3>
+            <p>250g - 75 TL</p>
+            <button onclick="sepeteEkle('Ceviz', 75)">Sepete Ekle</button>
+        </div>
+        <div class="urun">
+            <img src="badem.jpg" alt="Badem">
+            <h3>Badem</h3>
+            <p>250g - 85 TL</p>
+            <button onclick="sepeteEkle('Badem', 85)">Sepete Ekle</button>
+        </div>
+        <div class="urun">
+            <img src="hunnap.jpg" alt="Hünnap">
+            <h3>Hünnap</h3>
+            <p>250g - 65 TL</p>
+            <button onclick="sepeteEkle('Hünnap', 65)">Sepete Ekle</button>
+        </div>
+    </div>
+
+    <div id="sepet-modal" class="modal">
+        <div class="modal-icerik">
+            <h2>Sepetim</h2>
+            <div id="sepet-urunler"></div>
+            <div id="toplam-fiyat">Toplam: 0 TL</div>
+            <button onclick="sepetiBosalt()">Sepeti Boşalt</button>
+            <button onclick="siparisiTamamla()">Siparişi Tamamla</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
